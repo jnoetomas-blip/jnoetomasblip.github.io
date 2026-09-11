@@ -1,0 +1,206 @@
+:root {
+  --azul-escuro: #1c3a5e;
+  --azul-medio: #2c5282;
+  --cinza-fundo: #eef1f5;
+  --branco: #ffffff;
+  --texto: #2d3748;
+  --texto-suave: #64748b;
+  --borda: #dbe2ea;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  background: var(--cinza-fundo);
+  color: var(--texto);
+  line-height: 1.5;
+}
+
+/* Cabeçalho */
+.topo {
+  background: var(--azul-escuro);
+  color: var(--branco);
+  text-align: center;
+  padding: 2.2rem 1rem;
+}
+
+.topo h1 {
+  font-size: 1.9rem;
+  letter-spacing: 1px;
+}
+
+.topo p {
+  margin-top: 0.4rem;
+  font-size: 1rem;
+  color: #c9d6e6;
+}
+
+/* Layout principal */
+.container {
+  display: flex;
+  max-width: 1000px;
+  margin: 2rem auto;
+  gap: 1.5rem;
+  padding: 0 1rem;
+  align-items: flex-start;
+}
+
+/* Barra lateral */
+.sidebar {
+  background: var(--branco);
+  border-radius: 8px;
+  padding: 1.5rem;
+  width: 260px;
+  flex-shrink: 0;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.foto-perfil {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--azul-medio);
+  margin-bottom: 0.8rem;
+}
+
+.nome {
+  font-size: 1.2rem;
+  color: var(--azul-escuro);
+  margin-bottom: 1.2rem;
+}
+
+.bloco {
+  text-align: left;
+  border-top: 1px solid var(--borda);
+  padding-top: 0.9rem;
+  margin-top: 0.9rem;
+}
+
+.bloco h3 {
+  font-size: 0.85rem;
+  color: var(--azul-medio);
+  margin-bottom: 0.5rem;
+}
+
+.bloco p,
+.bloco li {
+  font-size: 0.9rem;
+  color: var(--texto-suave);
+  list-style: none;
+  margin-bottom: 0.25rem;
+}
+
+/* Conteúdo principal */
+.conteudo {
+  flex: 1;
+  min-width: 0;
+}
+
+.secao {
+  background: var(--branco);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.secao h2 {
+  color: var(--azul-escuro);
+  font-size: 1.2rem;
+  margin-bottom: 0.9rem;
+  border-bottom: 1px solid var(--borda);
+  padding-bottom: 0.5rem;
+}
+
+.secao p {
+  color: var(--texto-suave);
+}
+
+/* Tabela de habilidades */
+.tabela-habilidades {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabela-habilidades th,
+.tabela-habilidades td {
+  text-align: left;
+  padding: 0.6rem 0.5rem;
+  border-bottom: 1px solid var(--borda);
+  font-size: 0.92rem;
+}
+
+.tabela-habilidades th {
+  color: var(--azul-medio);
+  font-weight: 600;
+}
+
+/* Duas colunas: Formação / Experiência */
+.duas-colunas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+/* Cartões */
+.cartao {
+  background: var(--cinza-fundo);
+  border-left: 4px solid var(--azul-medio);
+  border-radius: 4px;
+  padding: 0.9rem 1rem;
+}
+
+.cartao-titulo {
+  font-weight: 600;
+  color: var(--azul-escuro);
+  margin-bottom: 0.2rem;
+}
+
+.cartao-sub {
+  font-size: 0.88rem;
+  color: var(--texto-suave);
+}
+
+.cartao a {
+  color: var(--azul-medio);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.cartao a:hover {
+  text-decoration: underline;
+}
+
+/* Rodapé */
+.rodape {
+  text-align: center;
+  padding: 1.2rem;
+  color: var(--texto-suave);
+  font-size: 0.85rem;
+}
+
+/* Responsividade */
+@media (max-width: 720px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .duas-colunas {
+    grid-template-columns: 1fr;
+  }
+
+  .topo h1 {
+    font-size: 1.5rem;
+  }
+}
